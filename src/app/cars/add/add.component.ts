@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Car } from '../model/car';
 import { CarService } from '../../car.service';
-import { Router } from 'react-router-dom';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add',
