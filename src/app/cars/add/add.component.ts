@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Car } from '../model/car';
-import { CarService } from '../../car.service';
+import { CarService } from '../services/car.service';
 import { Router } from '@angular/router';
 
 @Component({

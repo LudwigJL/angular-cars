@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { CarService } from '../../car.service';
+import { CarService } from '../services/car.service';
 import { Car } from '../model/car';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list',
@@ -11,5 +12,5 @@ import { Car } from '../model/car';
 export class ListComponent {
   carService = inject(CarService);
 
-  cars: Car[] = this.carService.getAllCars();
+  cars: Observable<Car[]> = this.carService.getAllCars();
 }
