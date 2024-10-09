@@ -27,6 +27,7 @@ export class AddComponent {
   }
 
   addCar() {
+    this.myCar
     this.myCar.make = this.carForm.value.make,
     this.myCar.model = this.carForm.value.model,
     this.myCar.description = this.carForm.value.description

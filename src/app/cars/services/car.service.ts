@@ -2,7 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { Car } from '../model/car';
 import { CARS } from '../data/cars';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { catchError, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +22,10 @@ export class CarService {
   }
 
   public addCar(car: Car) {
-    //this.currentId++; // Get a new value each time we add a car
+    console.log('In')
+    this.httpClient.post("http://localhost:3000/cars", car).subscribe();
+
+
     //this.cars.push({ ...car, id: this.currentId }); // Set that value in the object we push
   }
 }
